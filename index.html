@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Problem Solving webpage</title>
+    
+  </head>
+  <body class="container">
+
+    <h1 class="text-center text-danger"> Let's Solve some mathematical term with JavaScript</h1>
+    
+    <div class="margin"><u><h2 class="text-warning">1. Kilometer To Meter:</h2></u></div>
+
+    <div class="kilo2meter">
+      Enter Kilometer Value:<input type="number" id="first">
+      <button onclick="kiloToMeter()">Result</button>
+      Output in Meter:<input type="number" id="second">
+    </div>
+    <!-- kilometer to meter javascript function -->
+<script>
+  function kiloToMeter() {
+    var kilo=document.getElementById('first').value;
+    var conversion=kilo*1000;
+    document.getElementById('second').value =conversion;
+  }
+</script>
+
+    <u><h2 class="text-warning top">Calculation The Total Cost of three product:</h2></u>
+   <h3 class="text">Calculation of cost</h3> 
+   <h4>when, <br>
+       Per piece Mobile = 100 Taka  <br>
+       per piece Laptop = 1000 Taka <br>
+       per piece Camera = 50 Taka   <br>
+  </h4>
+<div class="totalCostOfProduct">
+  Amount of Mobile:<input type="number" id="third" class="same">  <br>
+  Amount of Laptop:<input type="number" id="fourth" class="same"> <br>
+  Amount of Camera:<input type="number" id="five" class="same">   <br>
+  <button onclick="productCost()">Result</button>   <br>
+  Total cost of this three product in Taka:<input type="number" id="sixth">                  
+</div>
+
+<!-- summation of three producs cost javascript function -->
+
+<script>
+  function productCost() {
+    var mobile=document.getElementById('third').value;
+    var laptop= document.getElementById('fourth').value;
+    var camera= document.getElementById('five').value;
+    var mobileCost=mobile*100;
+    var laptopCost= laptop*1000;
+    var cameraCost= camera*50;
+    cost=mobileCost+laptopCost+cameraCost;
+    document.getElementById('sixth').value = cost;
+  }
+</script>
+      
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
