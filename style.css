@@ -7,6 +7,12 @@
 .top{
     margin-top: 70px;
 }
+#first{
+    margin: 10px;
+}
+#second{
+    margin: 10px;
+}
 
 #third{
     margin: 10px 0px 10px 155px;
@@ -21,3 +27,21 @@
 #sixth{
     margin: 10px 0px 10px 20px;
 }
+input {
+    color: orangered;
+    border-width: 1px;
+    margin: 10px;
+  }
+  body{
+      background-color: rgb(255, 255, 194);
+  }
+
+  span{
+      margin-left: 10px;
+  }
+  .hotel{
+      margin-top: 70px;
+  }
+  .loop{
+      margin: 70px 0px 300px 0px;
+  }

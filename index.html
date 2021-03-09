@@ -16,12 +16,12 @@
 
     <h1 class="text-center text-danger"> Let's Solve some mathematical term with JavaScript</h1>
     
-    <div class="margin"><u><h2 class="text-warning">1. Kilometer To Meter:</h2></u></div>
+    <div class="margin"><u><h2 class="text-primary">1. Kilometer To Meter:</h2></u></div>
 
     <div class="kilo2meter">
       Enter Kilometer Value:<input type="number" id="first">
-      <button onclick="kiloToMeter()">Result</button>
-      Output in Meter:<input type="number" id="second">
+      <button onclick="kiloToMeter()" class="btn btn-success">Result</button>
+      <span>Output in Meter:<input type="number" id="second"></span>
     </div>
     <!-- kilometer to meter javascript function -->
 <script>
@@ -32,7 +32,7 @@
   }
 </script>
 
-    <u><h2 class="text-warning top">Calculation The Total Cost of three product:</h2></u>
+    <u><h2 class="text-primary top">2.Calculation The Total Cost of three product:</h2></u>
    <h3 class="text">Calculation of cost</h3> 
    <h4>when, <br>
        Per piece Mobile = 100 Taka  <br>
@@ -40,10 +40,10 @@
        per piece Camera = 50 Taka   <br>
   </h4>
 <div class="totalCostOfProduct">
-  Amount of Mobile:<input type="number" id="third" class="same">  <br>
-  Amount of Laptop:<input type="number" id="fourth" class="same"> <br>
-  Amount of Camera:<input type="number" id="five" class="same">   <br>
-  <button onclick="productCost()">Result</button>   <br>
+   Amount of Mobile:<input type="number" id="third" class="same">  <br>
+   Amount of Laptop:<input type="number" id="fourth" class="same"> <br>
+   Amount of Camera:<input type="number" id="five" class="same">   <br>
+  <button onclick="productCost()" class="btn btn-success">Result</button>   <br>
   Total cost of this three product in Taka:<input type="number" id="sixth">                  
 </div>
 
@@ -61,8 +61,73 @@
     document.getElementById('sixth').value = cost;
   }
 </script>
-      
 
+<!-- hotel cost calculation with java script -->
+<section class="hotel">
+      
+      <div class="group">
+        <u><h2 class="text-primary">3.Calculation Of Hotel Cost:</h2></u>
+      <h3>Calculation Cost </h3>
+      <h4>When,<br>
+          First 10 days cost is per day 100 Taka <br>
+          Second 10 days cost is per day 80 Taka <br>
+          After 20 days, per day cost 50 Taka      
+      </h4>
+      </div>
+
+      Enter How Many Day You Stay: <input type="number" id="seventh">
+      <button class="btn btn-success" onclick="hotelCost()">Result</button>
+      <span>Total Cost in Taka: <input type="number" id="eighth"></span>
+
+</section>
+
+<!-- hotel cost calculation javascript code -->
+
+<script>
+  function hotelCost() {
+    var totalCost=0;
+    var day= document.getElementById('seventh').value;
+    if (day<=10) {
+      totalCost= day*100;
+    }
+    else if (day<=20) {
+      var firstTen=1000;
+      var newDay= day-10;
+      totalCost=1000+(newDay*80);
+    }
+     else {
+    var firstTwenty=1800;
+    newDay= day-20;
+    totalCost=1800+(newDay*50);
+
+    }
+    document.getElementById('eighth').value = totalCost;
+  }
+</script>
+
+<!-- finding largest word with javascript -->
+<section class="loop">
+  <u><h2 class="text-primary">4.Find The Largest Name/Word: <span class="text-danger">Not working</span></h2></u>
+  <h3>Type several name in the box like below,</h3>
+  <h4>Nazmul, Hossain, Hazrat, Jobaidul, Shaown, Monir, Rony</h4>
+
+  Enter Name/Word list: <input type="text" id="nineth">
+  <button class="btn btn-success" onclick="largestWord()">Result</button>
+  <span>Among them largest word is: <input type="text" id="tenth"></span>
+</section>
+<script>
+  function largestWord() {
+    var result="";
+    var list=([document.getElementById('nineth').value]);
+    for (var index = 0; index < list.length; index++) {
+      if (result.length<list[index].length) {
+        result=list[index];
+      }
+      
+    }
+    document.getElementById('tenth').value = result; 
+  }
+</script>
 
 
 
